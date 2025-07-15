@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Berry's Delight</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Pacifico&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body class>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="Berry's Delight Logo" />
+                <span class="brand-name">Berry's Delight</span>
+            </a>
+            <nav id="nav-links">
+                <a href="#" class="active"><i class="fas fa-home"></i> Home</a>
+                <a href="#catalog"><i class="fas fa-ice-cream"></i> Flavours</a>
+                <a href="#bowl-builder"><i class="fas fa-bowl-food"></i> Bowl Order</a>
+                <a href="#founder"><i class="fas fa-user-tie"></i> About Founder</a>
+            </nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="slide active">
+                <img src="images/headgirl.jpg" alt="smiling lady with branded bag">
+            </div>
+            <div class="slide">
+                <video autoplay muted loop>
+                    <source src="videos/popcorn.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide">
+                <img src="images/slide1.jpg" alt="popcorn-making process">
+            </div>
+            <div class="slide">
+                    <img src="images/slide2.jpg" alt="popcorn packeged">
+                </video>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Delight in Every Bite</h1>
+            <p>We offer tasty and crunchy popcorn uniquely popped to pamper your taste buds.</p>
+            <a href="#flavours" class="cta-btn">
+                Explore Flavours
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="slider-controls">
+            <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- 🍿 SINGLE-SERVE PRODUCT CATALOG -->
+    <section class="catalog" id="catalog">
+        <h2 class="catalog-title">Our Popcorn Flavours</h2>
+    
+        <!-- GLAZED DELIGHTS -->
+        <h3 class="category-label glazed">Glazed Delights</h3>
+        <div class="catalog-grid">
+            <div class="product-card">
+                <img src="images/salty.png" alt="Salty Delight" />
+                <h4>Salty Delights</h4>
+                <p class="price">₦1000</p>
+                <div class="quantity-selector">
+                    <button type="button" class="qty-btn minus">-</button>
+                    <input type="number" value="1" min="1" max="20" class="qty-input" />
+                    <button type="button" class="qty-btn plus">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Salty Delights" data-price="1000">Add to Cart</button>
+            </div>
+    
+        <div class="product-card">
+            <img src="images/milk-coating.png" alt="Buttery Sweet Glaze with Milk Coating" />
+            <h4>Buttery Sweet Glaze w/ Milk</h4>
+            <p class="price">₦1000</p>
+            <div class="quantity-selector">
+                <button type="button" class="qty-btn minus">-</button>
+                <input type="number" value="1" min="1" max="20" class="qty-input" />
+                <button type="button" class="qty-btn plus">+</button>
+            </div>
+            <button class="add-to-cart" data-name="Buttery Sweet Glaze w/ Milk" data-price="1000">Add to Cart</button>
+        </div>
+    
+        <div class="product-card">
+            <img src="images/extra-milk.png" alt="Buttery Sweet Glaze with Extra Milk" />
+            <h4>Buttery Sweet Glaze w/ Extra Milk</h4>
+            <p class="price">₦1500</p>
+            <div class="quantity-selector">
+                <button type="button" class="qty-btn minus">-</button>
+                <input type="number" value="1" min="1" max="20" class="qty-input" />
+                <button type="button" class="qty-btn plus">+</button>
+            </div>
+            <button class="add-to-cart" data-name="Extra Milk Glaze" data-price="1500">Add to Cart</button>
+        </div>
+        </div>
+    
+        <!-- CLASSIC FLAVORS -->
+        <h3 class="category-label classic">Classic Flavors</h3>
+        <div class="catalog-grid">
+        <div class="product-card">
+            <img src="images/caramel.png" alt="Caramel" />
+            <h4>Caramel (No Milk)</h4>
+            <p class="price">₦1500</p>
+            <div class="quantity-selector">
+                <button type="button" class="qty-btn minus">-</button>
+                <input type="number" value="1" min="1" max="20" class="qty-input" />
+                <button type="button" class="qty-btn plus">+</button>
+            </div>
+            <button class="add-to-cart" data-name="Caramel (No Milk)" data-price="1500">Add to Cart</button>
+        </div>
+    
+        <div class="product-card">
+            <img src="images/black.jpg" alt="Dark Chocolate Glazed" />
+            <h4>Dark Chocolate Glazed (No Milk)</h4>
+            <p class="price">₦1500</p>
+            <div class="quantity-selector">
+                <button type="button" class="qty-btn minus">-</button>
+                <input type="number" value="1" min="1" max="20" class="qty-input" />
+                <button type="button" class="qty-btn plus">+</button>
+            </div>
+            <button class="add-to-cart" data-name="Dark Chocolate Glazed" data-price="1500">Add to Cart</button>
+        </div>
+    
+        <div class="product-card">
+            <img src="images/white-choco.png" alt="White Chocolate Glazed" />
+            <h4>White Chocolate Glazed (No Milk)</h4>
+            <p class="price">₦1500</p>
+            <div class="quantity-selector">
+                <button type="button" class="qty-btn minus">-</button>
+                <input type="number" value="1" min="1" max="20" class="qty-input" />
+                <button type="button" class="qty-btn plus">+</button>
+            </div>
+            <button class="add-to-cart" data-name="White Chocolate Glazed" data-price="1500">Add to Cart</button>
+        </div>
+    
+        <div class="product-card">
+            <img src="images/red.jpg" alt="Strawberry Glazed" />
+            <h4>Strawberry Glazed</h4>
+            <p class="price">₦2500</p>
+            <div class="quantity-selector">
+                <button type="button" class="qty-btn minus">-</button>
+                <input type="number" value="1" min="1" max="20" class="qty-input" />
+                <button type="button" class="qty-btn plus">+</button>
+            </div>
+            <button class="add-to-cart" data-name="Strawberry Glazed" data-price="2500">Add to Cart</button>
+        </div>
+    
+        <div class="product-card">
+            <img src="images/strawberry-choco.png" alt="Strawberry & Chocolate Mix" />
+            <h4>Strawberry & Chocolate Mix</h4>
+            <p class="price">₦3000</p>
+            <div class="quantity-selector">
+                <button type="button" class="qty-btn minus">-</button>
+                <input type="number" value="1" min="1" max="10" class="qty-input" />
+                <button type="button" class="qty-btn plus">+</button>
+            </div>
+            <button class="add-to-cart" data-name="Strawberry & Chocolate Mix" data-price="3000">Add to Cart</button>
+        </div>
+        </div>
+    </section>
+    
+    <!-- Floating Cart Button -->
+    <div class="cart-button" id="cart-button">
+        🛒 <span id="cart-count">0</span>
+    </div>
+    <div id="cart-modal" style="display:none; position:fixed; top:10%; right:10px; background:#fff; border:2px solid #742979; padding:1rem; border-radius:12px; box-shadow:0 0 12px rgba(0,0,0,0.2); z-index:1001; max-width:300px;">
+        <h4 style="margin-top:0; color:#742979;">Your Cart</h4>
+        <ul id="cart-items" style="padding-left:1rem; list-style-type:disc;"></ul>
+        <div id="user-details" style="margin-top: 1rem;">
+            <input type="text" id="customer-name" placeholder="Your Name" required style="width: 100%; padding: 0.5rem; margin-bottom: 0.5rem;" />
+            <input type="text" id="customer-location" placeholder="Your Location" required style="width: 100%; padding: 0.5rem;" />
+        </div>
+        <button id="checkout-btn" style="margin-top:1rem; background:#e3b018; border:none; padding:0.5rem 1rem; border-radius:6px; color:#4b008d; font-weight:bold; cursor:pointer;">Checkout</button>
+      </div>
+
+
+    <!-- 🥣 BUILD A BOWL SECTION -->
+    <section class="bowl-builder" id="bowl-builder">
+        <h2 class="catalog-title">Build Your Bowl</h2>
+        <form id="bowlForm">
+        <label for="bowl-size">Choose Bowl Size:</label>
+        <select id="bowl-size" required>
+            <option value="">-- Select Size --</option>
+            <option value="Small Bowl - ₦7000">Small Bowl - ₦7000</option>
+            <option value="Medium Bowl - ₦10000">Medium Bowl - ₦10000</option>
+            <option value="Large Bowl - ₦15000">Large Bowl - ₦15000</option>
+        </select>
+
+        <label for="bowl-quantity">Quantity:</label>
+        <div class="quantity-selector bowl-quantity">
+            <button type="button" class="qty-btn minus">-</button>
+            <input type="number" id="bowl-quantity" value="1" min="1" max="10" class="qty-input" />
+            <button type="button" class="qty-btn plus">+</button>
+        </div>
+    
+        <p>Select up to 3 Flavours:</p>
+        <div class="flavour-checkboxes">
+            <label><input type="checkbox" name="flavours" value="Caramel" /> Caramel</label>
+            <label><input type="checkbox" name="flavours" value="Dark Chocolate" /> Dark Chocolate</label>
+            <label><input type="checkbox" name="flavours" value="White Chocolate" /> White Chocolate</label>
+            <label><input type="checkbox" name="flavours" value="Strawberry Glaze" /> Strawberry Glaze</label>
+            <label><input type="checkbox" name="flavours" value="Strawberry & Chocolate" /> Strawberry & Chocolate</label>
+            <label><input type="checkbox" name="flavours" value="Buttery Sweet Milk" /> Buttery Sweet Milk</label>
+            <label><input type="checkbox" name="flavours" value="Salty Delight" /> Salty Delight</label>
+        </div>
+    
+        <button type="submit" class="add-to-cart" style="margin-top:1rem">Add Bowl to Cart</button>
+        </form>
+    </section>
+
+    <!-- 🛡️ WHY CHOOSE US SECTION -->
+    <section class="why-choose-us" id="why">
+        <h2 class="catalog-title">Why Choose Berry’s Delight?</h2>
+        <div class="benefits-grid">
+        <div class="benefit-card">
+            <i class="fas fa-seedling benefit-icon"></i>
+            <h4>Fresh & Premium</h4>
+            <p>Made fresh daily with high-quality ingredients — every kernel pops with love.</p>
+        </div>
+        <div class="benefit-card">
+            <i class="fas fa-ice-cream benefit-icon"></i>
+            <h4>Delightfully Unique Flavours</h4>
+            <p>From classic caramel to chocolate-strawberry fusion, we make snacking fun and special.</p>
+        </div>
+        <div class="benefit-card">
+            <i class="fas fa-box-open benefit-icon"></i>
+            <h4>Clean, Beautiful Packaging</h4>
+            <p>Packaged to preserve taste and beauty. Perfect for gifting, sharing, or keeping all to yourself 😉</p>
+        </div>
+        <div class="benefit-card">
+            <i class="fab fa-whatsapp benefit-icon"></i>
+            <h4>Easy WhatsApp Ordering</h4>
+            <p>Pick your favourite flavours and order in 2 taps — sweet satisfaction is a message away.</p>
+        </div>
+        </div>
+    </section>
+
+    <!-- 💬 TESTIMONIALS SECTION -->
+    <section class="testimonials" id="testimonials">
+        <h2 class="catalog-title">Happy Snackers Say...</h2>
+        <div class="testimonial-slider">
+        <div class="slide-track">
+            <div class="testimonial">
+            <p>“This popcorn is heavenly! The strawberry glaze is my absolute fav 🤩”</p>
+            <h4>— Favour, Port Harcourt</h4>
+            </div>
+            <div class="testimonial">
+            <p>“I brought some to work and now my whole office is addicted 😂”</p>
+            <h4>— Emeka, Lagos</h4>
+            </div>
+            <div class="testimonial">
+            <p>“Berry’s Delight is my go-to gift for birthdays. Beautiful packaging & tastes even better!”</p>
+            <h4>— Ada, Abuja</h4>
+            </div>
+            <div class="testimonial">
+            <p>“My kids can’t get enough of the caramel flavour! It's our weekend treat now.”</p>
+            <h4>— Mrs. Kemi, Port Harcourt</h4>
+            </div>
+            <div class="testimonial">
+            <p>“Affordable, creative, and simply DELICIOUS. 10/10!”</p>
+            <h4>— John, Enugu</h4>
+            </div>
+    
+            <!-- Duplicates for infinite loop -->
+            <div class="testimonial">
+            <p>“This popcorn is heavenly! The strawberry glaze is my absolute fav 🤩”</p>
+            <h4>— Favour, Port Harcourt</h4>
+            </div>
+            <div class="testimonial">
+            <p>“I brought some to work and now my whole office is addicted 😂”</p>
+            <h4>— Emeka, Lagos</h4>
+            </div>
+            <div class="testimonial">
+            <p>“Berry’s Delight is my go-to gift for birthdays. Beautiful packaging & tastes even better!”</p>
+            <h4>— Ada, Abuja</h4>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- 🙋‍♀️ MEET THE FOUNDER SECTION -->
+    <section class="founder" id="founder">
+        <div class="founder-container">
+          <img src="images/founder.jpg" alt="Founder of Berry’s Delight" class="founder-img" />
+          <div class="founder-text">
+            <h2>Meet the Founder</h2>
+            <p>
+              "Hi, I’m the founder of Berry’s Delight — a creative entrepreneur with one simple goal: to satisfy your cravings with the crunchiest, most delightful popcorn you’ve ever tasted.
+            </p>
+            <p>
+              What began as a fun experiment in my kitchen turned into a full-blown passion. Every flavour I create is crafted with care, love, and a sprinkle of imagination. Whether it’s sweet, salty, or a bit of both, my popcorn is made to lift your mood and spark joy in your day.
+            </p>
+            <p>
+              For me, popcorn is more than a snack — it’s a way of connecting with people, celebrating moments, and sharing smiles. So, whether you’re building your own bowl or grabbing your favourite single-serve, just know: I put my heart into every bite.
+            </p>
+            <p><strong>It is always a delight in every bite.</strong> 💜</p>
+          </div>
+        </div>
+    </section>
+
+    <!-- 🔚 FOOTER SECTION -->
+    <footer class="site-footer">
+        <div class="footer-container">
+        <div class="footer-logo">
+            <img src="images/berrylogo.jpg" alt="Berry's Delight Logo" />
+            
+        </div>
+    
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+            <li><a href="#catalog">Flavours</a></li>
+            <li><a href="#bowl-builder">Build Your Bowl</a></li>
+            <li><a href="#why">Why Choose Us</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#founder">Our Founder</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-contact">
+            <h4>Contact</h4>
+            <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/2348029319622">Chat on WhatsApp</a></p>
+            <p><i class="fas fa-envelope"></i> berrysdelight001@gmail.com</p>
+            <p><i class="fab fa-instagram"></i> <a href="https://instagram.com/berrysdelight">@berrysdelight</a></p>
+            <p><i class="fab fa-facebook"></i> <a href="https://facebook.com/berrysdelight">@Berry's Delight</a></p>
+        </div>
+        </div>
+    
+        <div class="footer-bottom">
+        <p>&copy; 2025 Berry’s Delight. All rights reserved.</p>
+        </div>
+    </footer>
+    
+  
+  
+
+    <script src="script.js"></script>
+</body>
+</html>
