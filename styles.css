@@ -1576,7 +1576,7 @@ nav a i {
     max-width: 300px;
     max-height: 80vh; /* Limit height to 80% of viewport height */
     overflow-y: auto; /* Enable vertical scrolling */
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
