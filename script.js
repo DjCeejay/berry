@@ -142,8 +142,15 @@ if (document.getElementById('bowlForm')) {
 }
 
 // Cart button toggle
-cartBtn.addEventListener('click', () => {
-    cartModal.style.display = cartModal.style.display === 'none' ? 'block' : 'none';
+    const isHidden = cartModal.style.display === 'none';
+    cartModal.style.display = isHidden ? 'flex' : 'none';
+    if (isHidden) {
+        setTimeout(() => {
+            cartModal.style.opacity = '1';
+        }, 10);
+    } else {
+        cartModal.style.opacity = '0';
+    }
 });
 
 checkoutBtn.addEventListener('click', () => {
