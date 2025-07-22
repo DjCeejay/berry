@@ -1298,10 +1298,14 @@ nav a i {
     flex: 1;
     max-width: 450px;
     position: relative;
+    overflow: hidden;
 }
 
 .founder-img img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
     height: auto;
     border-radius: 30px;
     box-shadow: 0 20px 40px rgba(116, 41, 121, 0.15);
