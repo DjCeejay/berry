@@ -1294,12 +1294,27 @@ nav a i {
     z-index: 1;
 }
 
-.founder-img {
+.founder-img-wrapper {
     flex: 1;
     max-width: 450px;
     position: relative;
+    border-radius: 30px;
     overflow: hidden;
-    aspect-ratio: 3/4; /* Add fixed aspect ratio */
+    /* Add aspect ratio to maintain image proportions */
+    aspect-ratio: 3/4;
+}
+
+.founder-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px;
+    /* Remove any transforms that might affect layout */
+    transform: none;
+    /* Fix for iOS Safari */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
 }
 
 .founder-img img {
