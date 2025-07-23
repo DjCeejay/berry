@@ -1299,17 +1299,19 @@ nav a i {
     max-width: 450px;
     position: relative;
     overflow: hidden;
+    aspect-ratio: 3/4; /* Add fixed aspect ratio */
 }
 
 .founder-img img {
     width: 100%;
-    height: auto;
-    max-height: 500px;
-    display: block;
+    height: 100%; /* Change from auto to 100% */
+    object-fit: cover; /* Add object-fit property */
+    object-position: center; /* Add object-position property */
     border-radius: 30px;
     box-shadow: 0 20px 40px rgba(116, 41, 121, 0.15);
     transform: translateY(0);
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: block;
 }
 
 .founder-img::before {
